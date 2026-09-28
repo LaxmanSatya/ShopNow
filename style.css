@@ -1,0 +1,127 @@
+/* Navigation Bar FlexBox */
+
+/* NaviagtionBar skin */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: black;
+
+}
+
+.navbar h2 {
+    color: white;
+}
+
+.menu{
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+
+/** hero skin */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color : lightblue;
+}
+
+.hero h1 {
+    font-size : 45px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    border-radius : 8px;
+    cursor : pointer;
+}
+
+/**//**//**//* Button Animation *//**//**//**/
+.hero button{
+    padding: 12px 25px;
+    border: none;
+    border-radius : 8px;
+    cursor: pointer;
+
+    animation: moveButton 1s infinite alternate;
+
+}
+
+@keyframes moveButton {
+    from {
+        transform: scale(1);
+
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+/* Step 5 : PRoduct Section Using CSS Grid */
+
+.products {
+    padding: 40px;
+    text-align: Center;
+}
+
+.product-grid{
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.product {
+    padding: 25px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.product button{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*Step 6 : Make it Responsive*/
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .menu {
+        margin-top: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+@media(max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+}
